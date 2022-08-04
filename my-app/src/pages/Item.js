@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
 const Item = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.styledText}>Item</Text>
+      <Text style={styles.styledText}>Is Item</Text>
     </View>
   );
 };

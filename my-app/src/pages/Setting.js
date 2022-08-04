@@ -19,17 +19,12 @@ const items = [
   { _id: 3, name: "Eunbin" },
 ];
 
-const List = ({ navigation }) => {
+const Setting = () => {
   const _onPress = (item) => {};
 
   return (
     <View style={styles.container}>
-      <Text
-        style={styles.styledText}
-        onPress={() => navigation.navigate("Item")}
-      >
-        List
-      </Text>
+      <Text style={styles.styledText}>Setting</Text>
       {items.map((item) => (
         <TouchableOpacity key={item.id} onPress={() => _onPress(item)}>
           <Text>{item.name}</Text>
@@ -39,4 +34,4 @@ const List = ({ navigation }) => {
   );
 };
 
-export default List;
+export default Setting;

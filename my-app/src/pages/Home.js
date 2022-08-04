@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, Button, View, Text } from "react-native";
+import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -12,11 +13,13 @@ const styles = StyleSheet.create({
   },
 });
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.styledText}>Home</Text>
-      <Button title="go to the list screen" />
+      <TouchableOpacity onPress={() => navigation.navigate("List")}>
+        <Text>go to the list screen</Text>
+      </TouchableOpacity>
     </View>
   );
 };
